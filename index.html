@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <!--Mis estilos-->
+  <link rel="stylesheet" href="/css/styless.css">
+</head>
+<body>
+  <main>
+
+    <section class="seccion-tarjetas">
+      <div class="tarjeta-trasera">
+        <img class="tarjeta-trasera-fondo" src="/images/bg-card-back.png" alt="">
+        <p  class="tarjeta-trasera-cvc">000</p>
+      </div>
+
+      <div class="tarjeta-enfrente">
+        <img class="tarjeta-enfrente-fondo" src="/images/bg-card-front.png" alt="">
+        <img class="tarjeta-enfrente-logo" src="/images/card-logo.svg" alt="">
+        <p class="tarjeta-enfrente-numero">0000 0000 0000 0000</p>
+        <p class="tarjeta-enfrente-nombre">Kevin Armando Pineda</p>
+        <p class="tarjeta-enfrente-fecha">00/00</p>
+        </form>
+      </div>
+
+    </section>
+
+    <section class="seccion-formulario">
+
+      <form class="contenedor-formulario" action="#" method="post">
+        <label for="nombre">CARDHOLDER NAME</label>
+        <input class="nombre-tarjeta-input" type="text" name="nombre" id="" placeholder="e.g. Jane Appleseed" maxlength="30" required>
+
+        <label for="numero">CARD NUMBER</label>
+        <input class="numero-tarjeta-input" type="text" name="numero" id="" placeholder="e.g. 1234 5678 9101 1121" maxlength="19" required minlength="19">
+
+        <div class="contenedor-ordenar-formulario">
+          <div class="formulario-fecha">
+            <label for="fecha">EXP. DATE (MM/YY)</label>
+            <input class="fecha-mm-input" type="text" name="fecha" id="" placeholder="MM" maxlength="2" required>
+            <input class="fecha-yy-input" type="text" name="fecha" id="" placeholder="YY" maxlength="2" required>
+          </div>
+          <div class="formulario-cvc">
+            <label for="cvc">CVC</label>
+            <input class="cvc-input" type="text" name="cvc" id="" placeholder="e.g. 123" maxlength="3" required> 
+          </div>
+        </div>
+        <input class="boton-enviar" type="submit" value="Confirm">
+      </form>
+
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
