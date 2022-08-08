@@ -40,15 +40,15 @@ function enviarFechaMM() {
     tarjetaEnfrenteFecha.innerHTML =
         fechaMmInput.value + " / " + fechaYyInput.value;
 
-    if (fechaMmInput.value == "") {
-        tarjetaEnfrenteFecha.innerHTML = "00" + " / " + fechaYyInput.value;
-    } else if (fechaYyInput.value == "") {
-        tarjetaEnfrenteFecha.innerHTML = fechaMmInput.value + " / " + "00";
-    } else {
-        tarjetaEnfrenteFecha.innerHTML =
-            fechaMmInput.value + " / " + fechaYyInput.value;
-    }
+        if (fechaMmInput.value == "" && !fechaYyInput.value == "") {
+            tarjetaEnfrenteFecha.innerHTML = "00" + " / " + fechaYyInput.value;
+        }else if (fechaYyInput.value == "" && !fechaMmInput.value == "") {
+            tarjetaEnfrenteFecha.innerHTML = fechaMmInput.value + " / " + "00";
+        }else if (fechaMmInput.value == "" && fechaYyInput.value == "") {
+            tarjetaEnfrenteFecha.innerHTML = "00" + " / " + "00";
+        }
 }
+
 function enviarCvc() {
     tarjetaTraseraCvc.innerHTML = cvcInput.value;
 
