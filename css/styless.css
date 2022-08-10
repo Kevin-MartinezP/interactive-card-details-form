@@ -8,7 +8,6 @@
     padding: 0;
 }
 body {
-    height: 100vh;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.8rem;
 }
@@ -26,6 +25,11 @@ html {
 --Darkgrayishviolet: hsl(279, 6%, 55%);
 --Verydarkviolet: hsl(278, 68%, 11%);
 }
+
+.input-incorrecto {
+    border: 1px solid hsl(0, 100%, 66%);
+    outline: hsl(0, 100%, 66%);
+}
 input {
     height: 50px;
     padding: 10px;
@@ -33,9 +37,6 @@ input {
     border-radius: 5px;
     margin-bottom: 10px;
     font-family: 'Space Grotesk', sans-serif;
-}
-input:active {
-    border: 1px solid red;
 }
 
 label {
@@ -51,6 +52,7 @@ main {
 .inactive {
     display: none;
 }
+
 /*Seccion tarjetas*/
 .seccion-tarjetas {
     position: relative;
@@ -139,6 +141,7 @@ main {
     display: flex;
     width: 100%;
     flex-direction: column;
+    max-width: 390px;
 }
 .contenedor-ordenar-formulario {
     display: flex;
@@ -151,14 +154,16 @@ main {
     background-color: var(--Verydarkviolet);
     color: var(--White);
     cursor: pointer;
+    font-weight: bold;
 }
 
 .contenedor-datos-agregados {
     display: flex;
     text-align: center;
-    padding: 15px;
+    
     flex-direction: column;
     width: 100%;
+    max-width: 400px;
 }
 .contenedor-datos-agregados img {
     align-self: center;
@@ -166,10 +171,20 @@ main {
     height: 70px;
     margin-bottom: 20px;
 }
-.contenedor-datos-agregados h2,p,boton-continuar {
+.contenedor-datos-agregados h2, p ,boton-continuar {
     margin-bottom: 30px;
 }
-
+.contenedor-datos-agregados p {
+    font-size: 1.5rem;
+    color: var(--Lightgrayishviolet);
+}
+.contenedor-datos-agregados .boton-continuar {
+    height: 50px;
+    font-weight: bold;
+    background-color: var(--Verydarkviolet);
+    color: var(--White);
+    cursor: pointer;
+}
 /*Dimensiónes*/
 @media (min-width: 1440px) {
     
